@@ -1,0 +1,50 @@
+.calculatorGrid {
+  display: grid;
+  margin-top: 10em;
+  margin-inline: 25%;
+  grid-template-columns: repeat(4, 4fr);
+  grid-template-rows:minmax(7rem, auto) repeat(5, 5rem);
+}
+
+.calculatorGrid > button {
+  font-size: 2rem;
+  color:rgb(196, 187, 165);
+  background-color: rgb(63, 93, 15);
+  outline: 3px solid rgb(4, 60, 38);
+}
+.calculatorGrid > button:hover, 
+.calculatorGrid > button:focus {
+  font-size: 2.1rem;
+  color:rgb(246, 201, 86);
+  cursor: pointer;
+}
+
+.spanTwo {
+  grid-column: span 2;
+}
+
+.output {
+  border-top: 5px solid rgb(246, 201, 86);
+  border-inline: 5px solid rgb(246, 201, 86);
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  grid-column: 1 / -1;
+  background: rgba(0, 0, 0, 0.502);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: .75em;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.output .previousOperand {
+  color: orange;
+  font-size: 1.5em;
+}
+
+.output .currentOperand {
+  color: orangered;
+  font-size: 2.5em;
+}
